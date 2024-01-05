@@ -1,0 +1,14 @@
+# Python
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+
+# Config
+config.yaml
+
+#python venv
+.venv/
+venv/
+.env/
+env/

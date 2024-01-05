@@ -1,0 +1,11 @@
+#  This file represents an example configuration file for the Cloudflare DDNS application.
+#  It contains placeholders for the API key, API email, zone ID, and DNS records.
+#  Replace the placeholder values with your actual Cloudflare credentials and desired DNS records.
+#  Then rename the file to config.yaml
+
+API_KEY : "YOUR_API_KEY"
+API_EMAIL: "YOUR_API_EMAIL"
+ZONE_ID: "YOUR_ZONE_ID"
+DNS_RECORDS:
+    - "example.com"
+    - "subdomain.example.com"
