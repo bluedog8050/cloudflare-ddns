@@ -5,8 +5,9 @@ COPY config.yaml /app/
 COPY requirements.txt /app/
 
 RUN apk add --no-cache python3 && \
-    pip3 install --upgrade pip && \
-    pip3 install -r /app/requirements.txt
+    apk add --update py3-pip \
+    pip install --upgrade pip && \
+    pip install -r /app/requirements.txt
 
 RUN echo "* * * * * python3 /app/cloudflare-ddns.py" >> /etc/crontabs/root
 
