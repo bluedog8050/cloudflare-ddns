@@ -2,6 +2,7 @@ import requests
 import json
 import yaml
 import datetime
+import time
 
 def what_is_my_ip():
     """
@@ -78,5 +79,7 @@ def update_dns_records():
                 current_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
                 print(f"[{current_time}] Failed to update DNS record {record['name']}")
 
-#run the update_dns_records function if the script is run directly
-if __name__ == "__main__": update_dns_records()
+#run the check every minute
+while True:
+    update_dns_records()
+    time.sleep(60)
