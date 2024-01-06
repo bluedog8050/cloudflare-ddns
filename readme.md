@@ -10,7 +10,7 @@ __Setup__
 2. Rename or copy the config.yaml.example to config.yaml
 3. Install python dependencies with ```pip install -r requirements.txt```
 4. Run the script with ```python3 cloudflare-ddns.py``` to make sure your configuration works
-5. Add the previous command to your scheduler of choice to run every minute. Changes will only be sent to cloudflare if the A records of the dns records you chose to update are different from your machines current wan IP.
+5. The script will check for updates every minute while running. Changes will only be sent to cloudflare if the A records of the dns records you chose to update are different from your machines current wan IP.
 
 __To find your Zone ID:__
 1. Login to Cloudflare:
